@@ -1,0 +1,13 @@
+# (PART) Statistics {-}
+
+# Statistical Concepts
+
+- Probability
+- Likelihood
+- Confidence Intervals
+- Statistical Methods
+- Classic Statistics
+- Bayesian statistics
+- Comparing classic and Bayesian statistics
+- Causality, Confounding
+
