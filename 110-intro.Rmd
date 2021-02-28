@@ -1,0 +1,10 @@
+
+# (PART) Introduction {-}
+
+# Introduction {#intro}
+
+In order to apply statistics and motivate advances on this area, we need to understand
+other areas as well.
+
+This is a test.
+

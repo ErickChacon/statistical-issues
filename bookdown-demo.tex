@@ -29,51 +29,11 @@
 }
 \usepackage{hyperref}
 \hypersetup{
-            pdftitle={A Minimal Book Example},
-            pdfauthor={Yihui Xie},
+            pdftitle={Statistical Issues},
+            pdfauthor={Erick A. Chacón Montalván},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
@@ -116,9 +76,9 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{A Minimal Book Example}
-\author{Yihui Xie}
-\date{2020-04-16}
+\title{Statistical Issues}
+\author{Erick A. Chacón Montalván}
+\date{2020-08-10}
 
 \begin{document}
 \maketitle
@@ -127,108 +87,114 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{preface}{%
+\chapter*{Preface}\label{preface}}
+\addcontentsline{toc}{chapter}{Preface}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+This is a work in progress of collection of topics I have been working on.
 
-The \textbf{bookdown} package can be installed from CRAN or Github:
+\hypertarget{how-to-read}{%
+\section*{How to read}\label{how-to-read}}
+\addcontentsline{toc}{section}{How to read}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\CommentTok{# or the development version}
-\CommentTok{# devtools::install_github("rstudio/bookdown")}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{structure}{%
+\section*{Structure}\label{structure}}
+\addcontentsline{toc}{section}{Structure}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+\hypertarget{software}{%
+\section*{Software}\label{software}}
+\addcontentsline{toc}{section}{Software}
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.name/tinytex/}.
+\hypertarget{acknowledgments}{%
+\section*{Acknowledgments}\label{acknowledgments}}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+\hypertarget{part-introduction}{%
+\part{Introduction}\label{part-introduction}}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+In order to apply statistics and motivate advances on this area, we need to
+understand other areas as well.
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+\hypertarget{part-statistics}{%
+\part{Statistics}\label{part-statistics}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{statistical-concepts}{%
+\chapter{Statistical Concepts}\label{statistical-concepts}}
 
-\begin{figure}
+\begin{itemize}
+\tightlist
+\item
+  Probability
+\item
+  Likelihood
+\item
+  Confidence Intervals
+\item
+  Statistical Methods
+\item
+  Classic Statistics
+\item
+  Bayesian statistics
+\item
+  Comparing classic and Bayesian statistics
+\item
+  Causality, Confounding
+\end{itemize}
 
-{\centering \includegraphics[width=0.8\linewidth]{bookdown-demo_files/figure-latex/nice-fig-1} 
+\hypertarget{part-inference}{%
+\part{Inference}\label{part-inference}}
 
-}
+\hypertarget{statistical-inference}{%
+\chapter{Statistical Inference}\label{statistical-inference}}
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
+\begin{itemize}
+\tightlist
+\item
+  Introduction to Statistical Inference
+\item
+  Bayesian Statistical Inference
+\item
+  Maximum Likelihood Inference
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+  \begin{itemize}
+  \tightlist
+  \item
+    Likelihood Function
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+    \begin{itemize}
+    \tightlist
+    \item
+      Maximum Likelihood Inference
+    \end{itemize}
+  \item
+    The entropy
 
-\begin{table}
+    \begin{itemize}
+    \tightlist
+    \item
+      Inference with Variational Bayes
+    \end{itemize}
+  \item
+    Intro inside inference basics
+  \end{itemize}
+\item
+  Inference used in Machine Learning
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
+  \begin{itemize}
+  \tightlist
+  \item
+    More About Variational Bayes
+  \end{itemize}
+\end{itemize}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\hypertarget{part-modelling}{%
+\part{Modelling}\label{part-modelling}}
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
-
-Here is a review of existing methods.
-
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
-
-We describe our methods in this chapter.
-
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\hypertarget{introduction-mod_intro}{%
+\chapter{Introduction \{mod\_intro\}}\label{introduction-mod_intro}}
 
 Some \emph{significant} applications are demonstrated in this chapter.
 
@@ -238,10 +204,204 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \hypertarget{example-two}{%
 \section{Example two}\label{example-two}}
 
+\hypertarget{part-programming}{%
+\part{Programming}\label{part-programming}}
+
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}
 
 We have finished a nice book.
+
+\hypertarget{part-mathematics}{%
+\part{Mathematics}\label{part-mathematics}}
+
+\hypertarget{linear-algebra}{%
+\chapter{Linear Algebra}\label{linear-algebra}}
+
+\hypertarget{linear-algebra-concepts}{%
+\section{Linear Algebra Concepts}\label{linear-algebra-concepts}}
+
+\newcommand{\rv}[1]{#1}
+\newcommand{\rve}[1]{\mathbf{#1}}
+\newcommand{\gp}{w}
+\newcommand{\gpt}{\text{GP}}
+\newcommand{\mgp}{\mathbf{w}}
+\newcommand{\mgpt}{\text{MGP}}
+
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\vet}[1]{\mathbf{#1}}
+\newcommand{\m}[1]{\mathbf{#1}}
+
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\tr}{\intercal}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normsq}[1]{\left\lVert#1\right\rVert^2}
+\newcommand{\diag}[1]{\text{diag}(#1)}
+\newcommand{\trace}[1]{\text{tr}\left(#1\right)}
+\newcommand{\cross}[2][]{#2^\tr\ifthenelse{\isempty{#1}}{#2}{{#1}}}
+\newcommand{\tcross}[1]{#1#1^\tr}
+\newcommand{\mve}[1]{\text{vec}({#1})}
+
+\newcommand{\ind}[1]{\mathds{1}_{\left(#1\right)}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\real}{\mathbb{R}}
+
+\newcommand{\df}[1]{\mathcal{#1}}
+
+\newcommand{\logit}[1]{\text{logit}\left(#1\right)}
+
+\newcommand{\key}[1]{\textbf{#1}}
+\newcommand{\page}[1]{page #1}
+\newcommand{\mypar}[1]{\noindent \textbf{#1}}
+\newcommand{\degrees}{^{\circ}}
+\newcommand{\eq}{\text{Equation }}
+\newcommand{\se}{\text{Section }}
+
+\emph{Linear transformations} and \emph{change of basis} are widely used in statistics, for this
+reason I briefly describe the definition of these concepts and how they are related.
+
+\hypertarget{linear-transformation}{%
+\subsection{Linear Transformation}\label{linear-transformation}}
+
+Letting \(V\) and \(W\) be vector spaces, a function \(f: V \rightarrow W\) is a linear
+transformation if the additivity and scalar multiplication properties are hold for
+any two vectors \(\mathbf{u}, \mathbf{v} \in V\) and a constant \(c\):
+\[f(\mathbf{u}+\mathbf{v}) = f(\mathbf{u}) + f(\mathbf{v})\]
+\[f(c\mathbf{v}) = cf(\mathbf{v}).\]
+
+This concept is more common to use when working with matrices. Considering the
+vector spaces \(V \in \mathbb{R}^n\) and \(W \in \mathbb{R}^m\), a matrix \(\mathbf{A}_{m \times n}\) and
+the vector \(\mathbf{x} \in V\); then the function
+\[f(\mathbf{x}) = \mathbf{A}\mathbf{x}\]
+is a linear
+transformation \(V \in \mathbb{R}^n\) to \(W \in \mathbb{R}^m\) because it holds the properties
+mentioned above. In this definition, although not mentioned, we are assuming that both
+\(V\) and \(W\) are defined using the \emph{standard basis} for \(\mathbb{R}^n\) and \(\mathbb{R}^m\)
+respectively.
+
+\hypertarget{change-of-basis}{%
+\subsection{Change of Basis}\label{change-of-basis}}
+
+Consider a vector \(\mathbf{u} \in \mathbb{R}^n\), it is implicitly defined using the
+\emph{standard basis} \(\{\mathbf{e}_1,\dots,\mathbf{e}_n\}\) for \(\mathbb{R}^n\), such as
+\(\mathbf{u}=\sum_{i=1}^n u_i \mathbf{e}_i\). In a similar manner, this vector \(\mathbf{u}\) can
+also be represented in vector spaces with different \emph{basis}, this is called
+\emph{change of basis}. For example, consider
+the vector space \(V \in \mathbb{R}^n\) with \emph{basis} \(\{\mathbf{v}_1,\dots,\mathbf{v}_n\}\). Then, in
+order to make the change of basis, it is required to find
+\(\mathbf{u}_v=(u_{v_1},\dots,u_{v_n})^\intercal\) such as
+\[\mathbf{u} = \sum_{i=1}^n u_{v_i} \mathbf{v}_i = \mathbf{V}\mathbf{u}_v,\]
+where the \(n\times n\) matrix \(\mathbf{V}=(\mathbf{v}_1,\dots,\mathbf{v}_n)\), hence the change from
+the \emph{standard basis} to the vector space \(V\) is
+\[\mathbf{u}_v = \mathbf{V}^{-1}\mathbf{u},\] while the change from the vector space \(V\) to the
+\emph{standard basis} is
+\[\mathbf{u} = \mathbf{V}\mathbf{u}_v.\]
+
+Now, consider another vector space \(W \in \mathbb{R}^n\) with \emph{basis}
+\(\{\mathbf{w}_1,\dots,\mathbf{w}_n\}\), the vector \(\mathbf{u}_v\) defined on the space \(V\) can
+also be defined on the space \(W\) as
+\[\mathbf{u}_w = \mathbf{W}^{-1}\mathbf{V}\mathbf{u}_v\]
+where the \(n\times n\) matrix \(\mathbf{W}=(\mathbf{w}_1,\dots,\mathbf{w}_n)\);
+similarly, the vector \(\mathbf{u}_w \in W\) can be defined on the space \(V\) as
+\[\mathbf{u}_v = \mathbf{V}^{-1}\mathbf{W}\mathbf{u}_w.\]
+It can be seen that in both cases, the
+original vector is first transformed to the space vector with \emph{standard basis}
+(left-multiplying the basis matrix) and
+then transformed to the desired vector space (left-multiplying the basis matrix
+inverse ).
+
+\hypertarget{change-of-basis-for-linear-transformations}{%
+\subsection{Change of Basis for Linear Transformations}\label{change-of-basis-for-linear-transformations}}
+
+Previously, we have presented a linear transformation
+\(f(\mathbf{x})=\mathbf{A}\mathbf{x}:\mathbb{R}^n\rightarrow\mathbb{R}^m\)
+using \emph{standard basis}. This transformation can also be represented from a vector space
+\(V\) with basis \(\{\mathbf{v}_1,\dots,\mathbf{v}_n\}\) to a vector space \(W\) with basis
+\(\{\mathbf{w}_1,\dots,\mathbf{w}_n\}\), then \(f': V \rightarrow W\) is defined as
+\[f'(\mathbf{x}_v) = \mathbf{W}^{-1}\mathbf{A}\mathbf{V}\mathbf{x}_v,\]
+where the matrices \(\mathbf{W}\) and \(\mathbf{V}\) are the basis matrix of the vector spaces \(W\)
+and \(V\) respectively. The matrix multiplication \(\mathbf{W}^{-1}\mathbf{A}\mathbf{V}\) implies a
+change of basis from \mathbf{V} to standard basis, the linear transformation using the
+standard basis, and the change from the standard basis to the space \(W\). In cases
+that \(V=W\), then the linear transformation is defined as
+\[f'(\mathbf{x}_v) = \mathbf{V}^{-1}\mathbf{A}\mathbf{V}\mathbf{x}_v.\]
+
+\hypertarget{eigenvalues-and-eigenvectors}{%
+\subsection{Eigenvalues and Eigenvectors}\label{eigenvalues-and-eigenvectors}}
+
+\emph{Eigenvalues} and \emph{eigenvectors} are used in several concepts of statistical inference
+and modelling. It can be useful for dimension reduction, decomposition of
+variance-covariance matrices, so on. For this reason, we provide basic details about
+eigenvectors and eigenvalues and their close relationship with linear
+transformations.
+
+\hypertarget{definition}{%
+\subsubsection{Definition}\label{definition}}
+
+The eigenvector of a linear transformation \(\mathbf{A}_{n\times n}\) is a non-zero vector
+\(\mathbf{v}\)
+such as the linear transformation of this vector is proportional to itself:
+\[\mathbf{A}\mathbf{v} = \lambda \mathbf{v} \iff (\mathbf{A}-\lambda\mathbf{I})\mathbf{v} = \mathbf{0},\]
+where \(\lambda\) is the eigenvalue associated to the eigenvector \(\mathbf{v}\). The
+equation above has non-zero solution if and only if
+\[\det(\mathbf{A}-\lambda\mathbf{I}) = 0.\]
+Then, all the eigenvalues \(\lambda\) of \(\mathbf{A}\) hold the condition above.
+
+There is an equivalence between the linear transformation \(f(\mathbf{x}) = \mathbf{A}\mathbf{x}\),
+and the eigenvalues \(\lambda_1, \lambda_2, \dots, \lambda_n\) and eigenvectors
+\(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\) of itself. This relationship provide more
+useful
+interpretation of the eigenvalues and eigenvectors, we will use the
+\href{../../mathematics/linear-algebra/10-linear-transformation}{change of basis}
+concept to describe it.
+
+\hypertarget{eigendecomposition-and-geometric-interpretation}{%
+\subsubsection{Eigendecomposition and geometric interpretation}\label{eigendecomposition-and-geometric-interpretation}}
+
+Considering a vector space \(V\) with basis \(\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\}\),
+any vector \(\mathbf{x} \in \mathbb{R}^n\) can be represented as \(\mathbf{V}\mathbf{x}_v\),
+where \(\mathbf{x}_v\) is the representation of \(\mathbf{x}\) using the matrix of basis
+\(\mathbf{V}=(\mathbf{v}_1, \dots, \mathbf{v}_n)\) of the vector space \(V\). Then, the linear
+transformation can be expressed as
+\[f(\mathbf{x}) = \mathbf{A}\mathbf{x} = \mathbf{A}\mathbf{V}\mathbf{x}_v = \mathbf{V}\mathbf{D}\mathbf{x}_v,\]
+where the diagonal matrix \(D=\text{diag}(\lambda_1, \dots, \lambda_n)\) and the last
+equivalence hold because \(\mathbf{A}\mathbf{v}_i=\mathbf{v}_i\lambda_i\). Finally, expressing
+\(\mathbf{x}_v\) in terms of the vector \(\mathbf{x}\) defined on the standard basis, we
+obtain that
+\[f(\mathbf{x}) = \mathbf{V}\mathbf{D}\mathbf{V}^{-1}\mathbf{x},\]
+the equality \(\mathbf{A}=\mathbf{V}\mathbf{D}\mathbf{V}^{-1}\) is called \emph{eigendecomposition}.
+Hence, the linear transformation is equivalent to the following:
+change the basis of \(\mathbf{x}\) to the vector space \(V\)
+, apply the diagonal linear transformation \(D\) and return to the space with
+standard basis. Geometrically, you can think of
+\(\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\}\) as the basis of vectorial space \(V\) where
+the transformation \(\mathbf{A}\) becomes only an scaling transformation \(\mathbf{D}\) and the
+eigenvalues \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the scaling factor in
+direction of the corresponding eigenvector \(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\).
+
+\hypertarget{basis-properties}{%
+\subsubsection{Basis properties}\label{basis-properties}}
+
+There are certain properties the are useful for statistical modelling such as:
+
+\begin{itemize}
+\tightlist
+\item
+  Trace of \(\mathbf{A}\) is equals to the sum of the eigenvalues.
+\item
+  Determinant of \(\mathbf{A}\) is equals to the sum of the eigenvalues.
+\item
+  If \(\mathbf{A}\) is symmetric, then all eigenvalues are real.
+\item
+  If \(\mathbf{A}\) is positive definite, then all eigenvalues are positive.
+\end{itemize}
+
+Note that, some of these properties can be explained using the \emph{eigendecomposition}
+\(\mathbf{A} = \mathbf{V}\mathbf{D}\mathbf{V}^{-1}\).
+
+\hypertarget{here-we-go}{%
+\chapter{Here we go}\label{here-we-go}}
 
 \bibliography{book.bib,packages.bib}
 

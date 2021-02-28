@@ -1,0 +1,11 @@
+# here
+
+- Computational Aspects:
+  - The **condition number** of an square matrix is the ratio between the largest and the smallest singular value. For a symmetric positive-definite matrix this is the same as the ratio between the largest and smallest eigenvalue. The importance of this indicator is that it measure how numerically unstable are matrix operations, e.g. inversion.
+
+# Newton-Raphson and Gradient Descent
+
+Given a function $f(x)$, the minimum can be found using gradient descent which needs
+to compute the first derivative $f'(x)$, or using newton-rapson to find the solution
+of $f'(x) = 0$ requiring to compute $f''(x)$. Gradient descent is mainly used because
+it only need the first derivative $f'(x)$.

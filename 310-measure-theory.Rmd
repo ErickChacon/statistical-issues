@@ -1,0 +1,86 @@
+
+## Measure Theory
+
+This deals with the issue of assigning a measure (e.g. length, area volume) to certain
+sets. Properties we should expect form a measure $\mu$ are:
+
+### Properties
+
+- Well-definedness: it should take values in $[0, \infty]$ and $\mu(\emptyset) = 0$.
+- Additiveness: if $A \cup B = \emptyset$ then  $\mu(A \cup B) = \mu(A) + \mu(B)$.
+- Invariant (addtional): under congruences and translations as *Lebesgue measure* on
+  $R^n$.
+
+Imagine that using these properties we try to obtain the area of a circle. We will notice
+that finite additivity is not enough, we also need to introduce $sigma$-additivity on
+additiveness property.
+
+### Set algebra and countability
+
+\begin{align}
+    A \cup B &= \{x: x \in A ~\text{or}~ x \in B ~\text{or}~ x \in A ~\text{and}~ B\}\\
+    A \cap B &= \{x: x \in A ~\text{and}~ B\}\\
+    A \setminus B &= \{x: x \in A ~\text{and}~ B\}
+\end{align}
+
+- $A \dot{\cup} B$ represents *disjoint union*,
+- $A \subset B$ means A is contained in B including $A = B$.
+- $A^c := X \setminus A$ for $A \subset B$ is the *complement* of A relative to $X$.
+
+Distributive laws:
+\begin{align}
+    A \cap (B \cup C) & = (A \cap B) \cup (A \cap C) \\
+    A \cap (B \cup C) & = (A \cap B) \cup (A \cap C)
+\end{align}
+
+Morgan's identities
+\begin{align}
+    \left(\bigcap_{i \in I} A_i\right)^c &= \bigcup_{i \in I} A_i^c \\
+    \left(\bigcup_{i \in I} A_i\right)^c &= \bigcap_{i \in I} A_i^c
+\end{align}
+
+A function $f: X \rightarrow Y$ is:
+
+- *injective* (one-to-one) $\Leftrightarrow$ $f(x) = f(x')$ implies $x = x'$,
+- *surjective* (onto) $\Leftrightarrow$ $f(X) := {f(x) \in Y: x \in X} = Y$,
+- *bijective*  $\Leftrightarrow$ $f(.)$ is injective and surjective.
+
+Set operations shown before and *direct images* under a funtion $f$ are not necessarily
+compatible:
+\begin{align}
+    f(A \cup B) &= f(A) \cup f(B) \\
+    f(A \cap B) &\neq f(A) \cap f(B) \\
+    f(A \setminus B) &\neq f(A) \setminus f(B) \\
+\end{align}
+While *inverse images* and set operations are always compatible. The inverse mapping
+$f_{-1}$ maps subsets $C \subset Y$ into subsets of $X$:
+\begin{equation}
+    f^{-1}(C) := \{x \in X: f(x) \in C\} \in X, ~\text{for all}~ C \subset Y.
+\end{equation}
+It follows that:
+\begin{align}
+    f^{-1}(\bigcup_{i \in I} C_i) &= \bigcup_{i \in I} f^{-1}(C_i), \\
+    f^{-1}(\bigcap_{i \in I} C_i) &= \bigcap_{i \in I} f^{-1}(C_i), \\
+    f^{-1}(C \setminus D) &= f^{-1}(C) \setminus f^{-1}(D)
+\end{align}
+
+### $\sigma$-Algebras
+
+A measure function must be defined on a system of sets stable under repetition of set
+operations ($\cup, \cap, ^c$) countably many times.
+
+A $\sigma$-algebra $\mathcal{A}$ on a set $X$ is a family of subsets of $X$ with the
+following properties:
+\begin{align}
+    X &\in \mathcal{A}, \\
+    A \in \mathcal{A} & \Rightarrow A^c \in \mathcal{A}, \\
+    (A_n)_{n\in N} \subset \mathcal{A} & \Rightarrow \bigcup_{n \in N} A_n \in
+    \mathcal{A}.
+\end{align}
+
+Based on these definitions, we can obtain some properties:
+
+- $\emptyset \in \mathcal{A}$
+- $A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A}$
+- $(A_n)_{n \in N} \subset \mathcal{A} \Rightarrow \cap_{n \in N} A_n \in \mathcal{A}$
+

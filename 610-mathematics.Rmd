@@ -1,0 +1,148 @@
+
+# (PART) Mathematics {-}
+
+# Linear Algebra
+
+## Linear Algebra Concepts
+
+<!-- ```{r latex, child = '~/.TinyTeX/texmf-home/tex/latex/tex-commands/custom-commands.md', include = FALSE} -->
+<!-- ``` -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+knitr::opts_chunk$set(fig.width = 12, fig.height = 7)
+options(width = 100)
+```
+
+*Linear transformations* and *change of basis* are widely used in statistics, for this
+reason I briefly describe the definition of these concepts and how they are related.
+
+### Linear Transformation
+
+Letting $V$ and $W$ be vector spaces, a function $f: V \rightarrow W$ is a linear
+transformation if the additivity and scalar multiplication properties are hold for
+any two vectors $\ve{u}, \ve{v} \in V$ and a constant $c$:
+\[f(\ve{u}+\ve{v}) = f(\ve{u}) + f(\ve{v})\]
+\[f(c\ve{v}) = cf(\ve{v}).\]
+
+This concept is more common to use when working with matrices. Considering the
+vector spaces $V \in \real^n$ and $W \in \real^m$, a matrix $\m{A}_{m \times n}$ and
+the vector $\ve{x} \in V$; then the function
+\[f(\ve{x}) = \m{A}\ve{x}\]
+is a linear
+transformation $V \in \real^n$ to $W \in \real^m$ because it holds the properties
+mentioned above. In this definition, although not mentioned, we are assuming that both
+$V$ and $W$ are defined using the *standard basis* for $\real^n$ and $\real^m$
+respectively.
+
+### Change of Basis
+
+Consider a vector $\ve{u} \in \real^n$, it is implicitly defined using the
+*standard basis* $\{\ve{e}_1,\dots,\ve{e}_n\}$ for $\real^n$, such as
+$\ve{u}=\sum_{i=1}^n u_i \ve{e}_i$. In a similar manner, this vector $\ve{u}$ can
+also be represented in vector spaces with different *basis*, this is called
+*change of basis*. For example, consider
+the vector space $V \in \real^n$ with *basis* $\{\ve{v}_1,\dots,\ve{v}_n\}$. Then, in
+order to make the change of basis, it is required to find
+$\ve{u}_v=(u_{v_1},\dots,u_{v_n})^\tr$ such as
+\[\ve{u} = \sum_{i=1}^n u_{v_i} \ve{v}_i = \m{V}\ve{u}_v,\]
+where the $n\times n$ matrix $\m{V}=(\ve{v}_1,\dots,\ve{v}_n)$, hence the change from
+the *standard basis* to the vector space $V$ is
+\[\ve{u}_v = \m{V}^{-1}\ve{u},\] while the change from the vector space $V$ to the
+*standard basis* is
+\[\ve{u} = \m{V}\ve{u}_v.\]
+
+Now, consider another vector space $W \in \real^n$ with *basis*
+$\{\ve{w}_1,\dots,\ve{w}_n\}$, the vector $\ve{u}_v$ defined on the space $V$ can
+also be defined on the space $W$ as
+\[\ve{u}_w = \m{W}^{-1}\m{V}\ve{u}_v\]
+where the $n\times n$ matrix $\m{W}=(\ve{w}_1,\dots,\ve{w}_n)$;
+similarly, the vector $\ve{u}_w \in W$ can be defined on the space $V$ as
+\[\ve{u}_v = \m{V}^{-1}\m{W}\ve{u}_w.\]
+It can be seen that in both cases, the
+original vector is first transformed to the space vector with *standard basis*
+(left-multiplying the basis matrix) and
+then transformed to the desired vector space (left-multiplying the basis matrix
+inverse ).
+
+### Change of Basis for Linear Transformations
+
+Previously, we have presented a linear transformation
+$f(\ve{x})=\m{A}\ve{x}:\real^n\rightarrow\real^m$
+using *standard basis*. This transformation can also be represented from a vector space
+$V$ with basis $\{\ve{v}_1,\dots,\ve{v}_n\}$ to a vector space $W$ with basis
+$\{\ve{w}_1,\dots,\ve{w}_n\}$, then $f': V \rightarrow W$ is defined as
+\[f'(\ve{x}_v) = \m{W}^{-1}\m{A}\m{V}\ve{x}_v,\]
+where the matrices $\m{W}$ and $\m{V}$ are the basis matrix of the vector spaces $W$
+and $V$ respectively. The matrix multiplication $\m{W}^{-1}\m{A}\m{V}$ implies a
+change of basis from \m{V} to standard basis, the linear transformation using the
+standard basis, and the change from the standard basis to the space $W$. In cases
+that $V=W$, then the linear transformation is defined as
+\[f'(\ve{x}_v) = \m{V}^{-1}\m{A}\m{V}\ve{x}_v.\]
+
+
+### Eigenvalues and Eigenvectors
+
+*Eigenvalues* and *eigenvectors* are used in several concepts of statistical inference
+and modelling. It can be useful for dimension reduction, decomposition of
+variance-covariance matrices, so on. For this reason, we provide basic details about
+eigenvectors and eigenvalues and their close relationship with linear
+transformations.
+
+#### Definition
+
+The eigenvector of a linear transformation $\m{A}_{n\times n}$ is a non-zero vector
+$\ve{v}$
+such as the linear transformation of this vector is proportional to itself:
+\[\m{A}\ve{v} = \lambda \ve{v} \iff (\m{A}-\lambda\m{I})\ve{v} = \ve{0},\]
+where $\lambda$ is the eigenvalue associated to the eigenvector $\ve{v}$. The
+equation above has non-zero solution if and only if
+\[\det(\m{A}-\lambda\m{I}) = 0.\]
+Then, all the eigenvalues $\lambda$ of $\m{A}$ hold the condition above.
+
+There is an equivalence between the linear transformation $f(\ve{x}) = \m{A}\ve{x}$,
+and the eigenvalues $\lambda_1, \lambda_2, \dots, \lambda_n$ and eigenvectors
+$\ve{v}_1, \ve{v}_2, \dots, \ve{v}_n$  of itself. This relationship provide more
+useful
+interpretation of the eigenvalues and eigenvectors, we will use the
+[change of basis](../../mathematics/linear-algebra/10-linear-transformation)
+concept to describe it.
+
+#### Eigendecomposition and geometric interpretation
+
+Considering a vector space $V$ with basis $\{\ve{v}_1, \ve{v}_2, \dots, \ve{v}_n\}$,
+any vector $\ve{x} \in \real^n$ can be represented as $\m{V}\ve{x}_v$,
+where $\ve{x}_v$ is the representation of $\ve{x}$ using the matrix of basis
+$\m{V}=(\ve{v}_1, \dots, \ve{v}_n)$ of the vector space $V$. Then, the linear
+transformation can be expressed as
+\[f(\ve{x}) = \m{A}\ve{x} = \m{A}\m{V}\ve{x}_v = \m{V}\m{D}\ve{x}_v,\]
+where the diagonal matrix $D=\diag{\lambda_1, \dots, \lambda_n}$ and the last
+equivalence hold because $\m{A}\ve{v}_i=\ve{v}_i\lambda_i$. Finally, expressing
+$\ve{x}_v$ in terms of the vector $\ve{x}$ defined on the standard basis, we
+obtain that
+\[f(\ve{x}) = \m{V}\m{D}\m{V}^{-1}\ve{x},\]
+the equality $\m{A}=\m{V}\m{D}\m{V}^{-1}$ is called *eigendecomposition*.
+Hence, the linear transformation is equivalent to the following:
+change the basis of $\ve{x}$ to the vector space $V$
+, apply the diagonal linear transformation $D$ and return to the space with
+standard basis. Geometrically, you can think of
+$\{\ve{v}_1, \ve{v}_2, \dots, \ve{v}_n\}$ as the basis of vectorial space $V$ where
+the transformation $\m{A}$ becomes only an scaling transformation $\m{D}$ and the
+eigenvalues $\lambda_1, \lambda_2, \dots, \lambda_n$ are the scaling factor in
+direction of the corresponding eigenvector $\ve{v}_1, \ve{v}_2, \dots, \ve{v}_n$.
+
+#### Basis properties
+
+There are certain properties the are useful for statistical modelling such as:
+
+- Trace of $\m{A}$ is equals to the sum of the eigenvalues.
+- Determinant of $\m{A}$ is equals to the sum of the eigenvalues.
+- If $\m{A}$ is symmetric, then all eigenvalues are real.
+- If $\m{A}$ is positive definite, then all eigenvalues are positive.
+
+Note that, some of these properties can be explained using the *eigendecomposition*
+$\m{A} = \m{V}\m{D}\m{V}^{-1}$.
+
+### Cauchy–Schwartz inequality
+
+$|<u, v>| <= ||u|| * ||v||$

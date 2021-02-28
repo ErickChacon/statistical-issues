@@ -1,0 +1,35 @@
+# (PART) Inference {-}
+
+# Statistical Inference
+
+It is a nice experience.
+
+- Introduction to Statistical Inference
+- Bayesian Statistical Inference
+- Maximum Likelihood Inference
+    - Likelihood Function
+        - Maximum Likelihood Inference
+    - The entropy
+        - Inference with Variational Bayes
+    - Intro inside inference basics
+- Inference used in Machine Learning
+    - More About Variational Bayes
+
+## Classical Inference Techniques
+
+- Maximum likelihood estimation
+  - [Expectation maximization]($blogdir/_inference/expectation-maximization.md)
+  - Iteratively reweighted least squares
+- Restricted maximum likelihood estimation
+
+## Bayesian Inference Techniques
+
+- Rejection sampling
+- Importance sampling
+- Markov chain Monte Carlo
+  - Gibbs sampling
+  - [Metropolis Hasting](Metropolis Hasting)
+- Laplace Approximation
+- Integrated nested Laplace approximation
+- Variational Bayes
+

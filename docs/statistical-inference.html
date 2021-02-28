@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Statistical Inference | Statistical Issues</title>
   <meta name="description" content="Main statistical concepts" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Statistical Inference | Statistical Issues" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Erick A. Chacón Montalván" />
 
 
-<meta name="date" content="2020-04-16" />
+<meta name="date" content="2020-12-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="statistical-concepts.html"/>
-<link rel="next" href="introduction-mod-intro.html"/>
+<link rel="next" href="classical-inference-techniques.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,6 +50,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -70,34 +71,49 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-read"><i class="fa fa-check"></i>How to read</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>Structure</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i>Software</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to read</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>Structure</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a></li>
+<li class="chapter" data-level="" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i>Acknowledgments</a></li>
 </ul></li>
 <li class="part"><span><b>I Introduction</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="part"><span><b>II Statistics</b></span></li>
 <li class="chapter" data-level="2" data-path="statistical-concepts.html"><a href="statistical-concepts.html"><i class="fa fa-check"></i><b>2</b> Statistical Concepts</a></li>
 <li class="part"><span><b>III Inference</b></span></li>
-<li class="chapter" data-level="3" data-path="statistical-inference.html"><a href="statistical-inference.html"><i class="fa fa-check"></i><b>3</b> Statistical Inference</a></li>
+<li class="chapter" data-level="3" data-path="statistical-inference.html"><a href="statistical-inference.html"><i class="fa fa-check"></i><b>3</b> Statistical Inference</a><ul>
+<li class="chapter" data-level="3.1" data-path="classical-inference-techniques.html"><a href="classical-inference-techniques.html"><i class="fa fa-check"></i><b>3.1</b> Classical Inference Techniques</a></li>
+<li class="chapter" data-level="3.2" data-path="bayesian-inference-techniques.html"><a href="bayesian-inference-techniques.html"><i class="fa fa-check"></i><b>3.2</b> Bayesian Inference Techniques</a></li>
+</ul></li>
 <li class="part"><span><b>IV Modelling</b></span></li>
 <li class="chapter" data-level="4" data-path="introduction-mod-intro.html"><a href="introduction-mod-intro.html"><i class="fa fa-check"></i><b>4</b> Introduction {mod_intro}</a><ul>
-<li class="chapter" data-level="4.1" data-path="introduction-mod-intro.html"><a href="introduction-mod-intro.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="introduction-mod-intro.html"><a href="introduction-mod-intro.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+<li class="chapter" data-level="4.1" data-path="example-one.html"><a href="example-one.html"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="generalized-additive-models.html"><a href="generalized-additive-models.html"><i class="fa fa-check"></i><b>4.2</b> Generalized additive models</a></li>
+<li class="chapter" data-level="4.3" data-path="gam.html"><a href="gam.html"><i class="fa fa-check"></i><b>4.3</b> GAM</a></li>
+<li class="chapter" data-level="4.4" data-path="gam-1.html"><a href="gam-1.html"><i class="fa fa-check"></i><b>4.4</b> GAM</a></li>
+<li class="chapter" data-level="4.5" data-path="practice-mgcv.html"><a href="practice-mgcv.html"><i class="fa fa-check"></i><b>4.5</b> Practice MGCV</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="practice-mgcv.html"><a href="practice-mgcv.html#basics-of-gam-model"><i class="fa fa-check"></i><b>4.5.1</b> Basics of gam model</a></li>
+<li class="chapter" data-level="4.5.2" data-path="practice-mgcv.html"><a href="practice-mgcv.html#smoothing-several-variables"><i class="fa fa-check"></i><b>4.5.2</b> Smoothing several variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="survival-analysis.html"><a href="survival-analysis.html"><i class="fa fa-check"></i><b>4.6</b> Survival Analysis</a></li>
+<li class="chapter" data-level="4.7" data-path="sub1.html"><a href="sub1.html"><i class="fa fa-check"></i><b>4.7</b> sub1</a></li>
+<li class="chapter" data-level="4.8" data-path="sub2.html"><a href="sub2.html"><i class="fa fa-check"></i><b>4.8</b> sub2</a></li>
 </ul></li>
 <li class="part"><span><b>V Programming</b></span></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="part"><span><b>VI Mathematics</b></span></li>
 <li class="chapter" data-level="6" data-path="linear-algebra.html"><a href="linear-algebra.html"><i class="fa fa-check"></i><b>6</b> Linear Algebra</a><ul>
-<li class="chapter" data-level="6.1" data-path="linear-algebra.html"><a href="linear-algebra.html#linear-algebra-concepts"><i class="fa fa-check"></i><b>6.1</b> Linear Algebra Concepts</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="linear-algebra.html"><a href="linear-algebra.html#linear-transformation"><i class="fa fa-check"></i><b>6.1.1</b> Linear Transformation</a></li>
-<li class="chapter" data-level="6.1.2" data-path="linear-algebra.html"><a href="linear-algebra.html#change-of-basis"><i class="fa fa-check"></i><b>6.1.2</b> Change of Basis</a></li>
-<li class="chapter" data-level="6.1.3" data-path="linear-algebra.html"><a href="linear-algebra.html#change-of-basis-for-linear-transformations"><i class="fa fa-check"></i><b>6.1.3</b> Change of Basis for Linear Transformations</a></li>
-<li class="chapter" data-level="6.1.4" data-path="linear-algebra.html"><a href="linear-algebra.html#eigenvalues-and-eigenvectors"><i class="fa fa-check"></i><b>6.1.4</b> Eigenvalues and Eigenvectors</a></li>
+<li class="chapter" data-level="6.1" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html"><i class="fa fa-check"></i><b>6.1</b> Linear Algebra Concepts</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html#linear-transformation"><i class="fa fa-check"></i><b>6.1.1</b> Linear Transformation</a></li>
+<li class="chapter" data-level="6.1.2" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html#change-of-basis"><i class="fa fa-check"></i><b>6.1.2</b> Change of Basis</a></li>
+<li class="chapter" data-level="6.1.3" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html#change-of-basis-for-linear-transformations"><i class="fa fa-check"></i><b>6.1.3</b> Change of Basis for Linear Transformations</a></li>
+<li class="chapter" data-level="6.1.4" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html#eigenvalues-and-eigenvectors"><i class="fa fa-check"></i><b>6.1.4</b> Eigenvalues and Eigenvectors</a></li>
+<li class="chapter" data-level="6.1.5" data-path="linear-algebra-concepts.html"><a href="linear-algebra-concepts.html#cauchyschwartz-inequality"><i class="fa fa-check"></i><b>6.1.5</b> Cauchy–Schwartz inequality</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="here-we-go.html"><a href="here-we-go.html"><i class="fa fa-check"></i><b>7</b> Here we go</a></li>
+<li class="chapter" data-level="7" data-path="here.html"><a href="here.html"><i class="fa fa-check"></i><b>7</b> here</a></li>
+<li class="chapter" data-level="8" data-path="newton-raphson-and-gradient-descent.html"><a href="newton-raphson-and-gradient-descent.html"><i class="fa fa-check"></i><b>8</b> Newton-Raphson and Gradient Descent</a></li>
+<li class="chapter" data-level="9" data-path="here-we-go.html"><a href="here-we-go.html"><i class="fa fa-check"></i><b>9</b> Here we go</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -121,6 +137,7 @@
             <section class="normal" id="section-">
 <div id="statistical-inference" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Statistical Inference</h1>
+<p>It is a nice experience.</p>
 <ul>
 <li>Introduction to Statistical Inference</li>
 <li>Bayesian Statistical Inference</li>
@@ -141,18 +158,14 @@
 <li>More About Variational Bayes</li>
 </ul></li>
 </ul>
-
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="statistical-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-mod-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="classical-inference-techniques.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -183,7 +196,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-inference.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/310-statistical-inference.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -197,7 +210,11 @@ gitbook.start({
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "toc": {
 "collapse": "subsection"
-}
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
 });
 });
 </script>

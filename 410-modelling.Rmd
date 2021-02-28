@@ -1,0 +1,65 @@
+# (PART) Modelling {-}
+
+# Introduction {mod_intro}
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Generalized additive models
+
+- splines
+  - A cubic spline is a piecewise polynomial with the property of being continuously differentiable until second order.
+  - The number of knots act as an smoothing parameter in unpenalized splines.
+  - Knots defined based on the quantiles of the data make the spline flexible in dense areas and less flexible in sparse areas, which is desirable.
+  - In general, it is more appropiate to select more knots than expected and use a penalty term to control for smothness avoiding the need to select number of knots.
+  - For $l$ knots and degree $r$, the space of polynomial splines is a vector space with dimension equals to the number of **free parameters**. $l-1$ polynomial functions of degree $r$ have $(r+1)(l-1)$ parameters. The condition of $r-1$ times continuously differentiable generate $r$ constrains for all the $l-2$ inside knots. Then, the number of **free parameters** is $(r+1)(l-1) - r(l-2) = r+l-1$.
+  - Natural splines assumes that the curvature, the second derivative, at the first and last knot is zero. Then, a natural cubic spline will have $l$ free parameters.
+
+  Simon Wood 2016
+
+  B-splines, whose construction from polynomial pieces gives them many attractive computational properties, as described by de Boor (1978).
+  2016 donnell
+
+## GAM
+
+- smoothing bases
+  - natural cubic splines are smoothest interpolators
+  - cubic smoothing splines
+  - cubic regression splines
+  - cyclic cubic regression spline
+  - p-splines
+  - thin plate regression splines
+  - tensor products smooths
+- polynomial spline
+- cubic spline
+  - on each data
+- regression spline
+  - on knots evenly spaced or with quantiles
+  - penalizing to avoid overfitting
+  - for $\lambda$ known, it is still a augmented linear model
+  - select $\lambda$ with ordinary cross validation
+  - computational and invariante advante og generalized cross validation
+  - Implementation
+  - initialize lambda
+  - given lambda, obtain beta
+  - compute gcv, and interate with previous step
+  - Identifiability, constrain one the rest of intercept parameters to zero.
+
+## GAM
+- penalized likelihood maximization
+  - no simple trick to produce an unpenalized glm whose likelihood is equivalent to the penalized likelihood of the GAM
+  - penalized iteratively re-weighted least squares
+  - The suggestion of representing GAMs using
+spline like penalized regression smoothers was made in section 9.3.6 of Hastie and
+Tibshirani (1990)
+
+## Practice MGCV
+### Basics of gam model
+- When the relationship is almost linear $df = 1$, the confidence interval are zero when the estimates is zero due to the identifiability constrain. This restriction sets the mean value of $f$ to zero, such as there is no uncertainty when $f = 0$.
+- The points on the smoothed effects are just the partial residual, which simple are the Pearson residuals plus the smooth function for the corresponding covariate being plotted.
+- Considering an initial model with $k_1$ knots and $df<k_1 -1$; then, increasing the number of knot to $k_2$, can modified the number of effective degrees of freedom. It happens because different subspace of functions are obtained when $k=k_1$ or $k+k_2$ for a particular $df$.
+- Smoother functions can be obtained introducing and additional parameter to the GCV score $\gamma$. For example, $\gamma = 1.4$ is suggested to avoid overfitting without compromising model fit.
+
+### Smoothing several variables
+- We can use thin plate regression spline or tensor products.

@@ -1,4 +1,4 @@
---- 
+---
 title: "Statistical Issues"
 author: "Erick A. Chacón Montalván"
 date: "`r Sys.Date()`"
@@ -14,7 +14,9 @@ description: "Main statistical concepts"
 
 # Preface {-}
 
-This is a work in progress of collection of topics I have been working on.
+This is a work in progress of collection of topics I have been working on. The main focus
+will be on putting together concepts of Statistics and Probability, inference, modelling,
+programming, mathematics and optimization.
 
 ## How to read {-}
 
