@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Introduction {mod_intro} | Statistical Issues</title>
+  <meta name="description" content="Main statistical concepts" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Introduction {mod_intro} | Statistical Issues" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Main statistical concepts" />
+  <meta name="github-repo" content="erickchacon/statistical-issues" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Introduction {mod_intro} | Statistical Issues" />
+  
+  <meta name="twitter:description" content="Main statistical concepts" />
+  
+
+<meta name="author" content="Erick A. Chacón Montalván" />
+
+
+<meta name="date" content="2021-03-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="310-statistical-inference.html"/>
+<link rel="next" href="450-survival-analysis.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistical Issues</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-read"><i class="fa fa-check"></i>How to read</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>Structure</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i>Software</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="110-intro.html"><a href="110-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="part"><span><b>II Statistics</b></span></li>
+<li class="chapter" data-level="2" data-path="210-statistics.html"><a href="210-statistics.html"><i class="fa fa-check"></i><b>2</b> Statistical Concepts</a><ul>
+<li class="chapter" data-level="2.1" data-path="310-measure-theory.html"><a href="310-measure-theory.html"><i class="fa fa-check"></i><b>2.1</b> Measure Theory</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="310-measure-theory.html"><a href="310-measure-theory.html#properties"><i class="fa fa-check"></i><b>2.1.1</b> Properties</a></li>
+<li class="chapter" data-level="2.1.2" data-path="310-measure-theory.html"><a href="310-measure-theory.html#set-algebra-and-countability"><i class="fa fa-check"></i><b>2.1.2</b> Set algebra and countability</a></li>
+<li class="chapter" data-level="2.1.3" data-path="310-measure-theory.html"><a href="310-measure-theory.html#sigma-algebras"><i class="fa fa-check"></i><b>2.1.3</b> <span class="math inline">\(\sigma\)</span>-Algebras</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Inference</b></span></li>
+<li class="chapter" data-level="3" data-path="310-statistical-inference.html"><a href="310-statistical-inference.html"><i class="fa fa-check"></i><b>3</b> Statistical Inference</a><ul>
+<li class="chapter" data-level="3.1" data-path="310-statistical-inference.html"><a href="310-statistical-inference.html#classical-inference-techniques"><i class="fa fa-check"></i><b>3.1</b> Classical Inference Techniques</a></li>
+<li class="chapter" data-level="3.2" data-path="310-statistical-inference.html"><a href="310-statistical-inference.html#bayesian-inference-techniques"><i class="fa fa-check"></i><b>3.2</b> Bayesian Inference Techniques</a></li>
+</ul></li>
+<li class="part"><span><b>IV Modelling</b></span></li>
+<li class="chapter" data-level="4" data-path="410-modelling.html"><a href="410-modelling.html"><i class="fa fa-check"></i><b>4</b> Introduction {mod_intro}</a><ul>
+<li class="chapter" data-level="4.1" data-path="410-modelling.html"><a href="410-modelling.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="410-modelling.html"><a href="410-modelling.html#generalized-additive-models"><i class="fa fa-check"></i><b>4.2</b> Generalized additive models</a></li>
+<li class="chapter" data-level="4.3" data-path="410-modelling.html"><a href="410-modelling.html#gam"><i class="fa fa-check"></i><b>4.3</b> GAM</a></li>
+<li class="chapter" data-level="4.4" data-path="410-modelling.html"><a href="410-modelling.html#gam-1"><i class="fa fa-check"></i><b>4.4</b> GAM</a></li>
+<li class="chapter" data-level="4.5" data-path="410-modelling.html"><a href="410-modelling.html#practice-mgcv"><i class="fa fa-check"></i><b>4.5</b> Practice MGCV</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="410-modelling.html"><a href="410-modelling.html#basics-of-gam-model"><i class="fa fa-check"></i><b>4.5.1</b> Basics of gam model</a></li>
+<li class="chapter" data-level="4.5.2" data-path="410-modelling.html"><a href="410-modelling.html#smoothing-several-variables"><i class="fa fa-check"></i><b>4.5.2</b> Smoothing several variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="450-survival-analysis.html"><a href="450-survival-analysis.html"><i class="fa fa-check"></i><b>4.6</b> Survival Analysis</a></li>
+<li class="chapter" data-level="4.7" data-path="450-survival-analysis.html"><a href="450-survival-analysis.html#sub1"><i class="fa fa-check"></i><b>4.7</b> sub1</a></li>
+<li class="chapter" data-level="4.8" data-path="450-survival-analysis.html"><a href="450-survival-analysis.html#sub2"><i class="fa fa-check"></i><b>4.8</b> sub2</a></li>
+</ul></li>
+<li class="part"><span><b>V Programming</b></span></li>
+<li class="chapter" data-level="5" data-path="510-programming.html"><a href="510-programming.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
+<li class="part"><span><b>VI Mathematics</b></span></li>
+<li class="chapter" data-level="6" data-path="610-mathematics.html"><a href="610-mathematics.html"><i class="fa fa-check"></i><b>6</b> Linear Algebra</a><ul>
+<li class="chapter" data-level="6.1" data-path="610-mathematics.html"><a href="610-mathematics.html#linear-algebra-concepts"><i class="fa fa-check"></i><b>6.1</b> Linear Algebra Concepts</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="610-mathematics.html"><a href="610-mathematics.html#linear-transformation"><i class="fa fa-check"></i><b>6.1.1</b> Linear Transformation</a></li>
+<li class="chapter" data-level="6.1.2" data-path="610-mathematics.html"><a href="610-mathematics.html#change-of-basis"><i class="fa fa-check"></i><b>6.1.2</b> Change of Basis</a></li>
+<li class="chapter" data-level="6.1.3" data-path="610-mathematics.html"><a href="610-mathematics.html#change-of-basis-for-linear-transformations"><i class="fa fa-check"></i><b>6.1.3</b> Change of Basis for Linear Transformations</a></li>
+<li class="chapter" data-level="6.1.4" data-path="610-mathematics.html"><a href="610-mathematics.html#eigenvalues-and-eigenvectors"><i class="fa fa-check"></i><b>6.1.4</b> Eigenvalues and Eigenvectors</a></li>
+<li class="chapter" data-level="6.1.5" data-path="610-mathematics.html"><a href="610-mathematics.html#cauchyschwartz-inequality"><i class="fa fa-check"></i><b>6.1.5</b> Cauchy–Schwartz inequality</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="710-optimization.html"><a href="710-optimization.html"><i class="fa fa-check"></i><b>7</b> here</a></li>
+<li class="chapter" data-level="8" data-path="710-optimization.html"><a href="710-optimization.html#newton-raphson-and-gradient-descent"><i class="fa fa-check"></i><b>8</b> Newton-Raphson and Gradient Descent</a></li>
+<li class="chapter" data-level="9" data-path="910-references.html"><a href="910-references.html"><i class="fa fa-check"></i><b>9</b> Here we go</a></li>
+<li class="chapter" data-level="" data-path="910-references.html"><a href="910-references.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Issues</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-mod_intro" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Introduction {mod_intro}</h1>
+<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
+<div id="example-one" class="section level2">
+<h2><span class="header-section-number">4.1</span> Example one</h2>
+</div>
+<div id="generalized-additive-models" class="section level2">
+<h2><span class="header-section-number">4.2</span> Generalized additive models</h2>
+<ul>
+<li><p>splines</p>
+<ul>
+<li>A cubic spline is a piecewise polynomial with the property of being continuously differentiable until second order.</li>
+<li>The number of knots act as an smoothing parameter in unpenalized splines.</li>
+<li>Knots defined based on the quantiles of the data make the spline flexible in dense areas and less flexible in sparse areas, which is desirable.</li>
+<li>In general, it is more appropiate to select more knots than expected and use a penalty term to control for smothness avoiding the need to select number of knots.</li>
+<li>For <span class="math inline">\(l\)</span> knots and degree <span class="math inline">\(r\)</span>, the space of polynomial splines is a vector space with dimension equals to the number of <strong>free parameters</strong>. <span class="math inline">\(l-1\)</span> polynomial functions of degree <span class="math inline">\(r\)</span> have <span class="math inline">\((r+1)(l-1)\)</span> parameters. The condition of <span class="math inline">\(r-1\)</span> times continuously differentiable generate <span class="math inline">\(r\)</span> constrains for all the <span class="math inline">\(l-2\)</span> inside knots. Then, the number of <strong>free parameters</strong> is <span class="math inline">\((r+1)(l-1) - r(l-2) = r+l-1\)</span>.</li>
+<li>Natural splines assumes that the curvature, the second derivative, at the first and last knot is zero. Then, a natural cubic spline will have <span class="math inline">\(l\)</span> free parameters.</li>
+</ul>
+<p>Simon Wood 2016</p>
+<p>B-splines, whose construction from polynomial pieces gives them many attractive computational properties, as described by de Boor (1978).
+2016 donnell</p></li>
+</ul>
+</div>
+<div id="gam" class="section level2">
+<h2><span class="header-section-number">4.3</span> GAM</h2>
+<ul>
+<li>smoothing bases
+<ul>
+<li>natural cubic splines are smoothest interpolators</li>
+<li>cubic smoothing splines</li>
+<li>cubic regression splines</li>
+<li>cyclic cubic regression spline</li>
+<li>p-splines</li>
+<li>thin plate regression splines</li>
+<li>tensor products smooths</li>
+</ul></li>
+<li>polynomial spline</li>
+<li>cubic spline
+<ul>
+<li>on each data</li>
+</ul></li>
+<li>regression spline
+<ul>
+<li>on knots evenly spaced or with quantiles</li>
+<li>penalizing to avoid overfitting</li>
+<li>for <span class="math inline">\(\lambda\)</span> known, it is still a augmented linear model</li>
+<li>select <span class="math inline">\(\lambda\)</span> with ordinary cross validation</li>
+<li>computational and invariante advante og generalized cross validation</li>
+<li>Implementation</li>
+<li>initialize lambda</li>
+<li>given lambda, obtain beta</li>
+<li>compute gcv, and interate with previous step</li>
+<li>Identifiability, constrain one the rest of intercept parameters to zero.</li>
+</ul></li>
+</ul>
+</div>
+<div id="gam-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> GAM</h2>
+<ul>
+<li>penalized likelihood maximization
+<ul>
+<li>no simple trick to produce an unpenalized glm whose likelihood is equivalent to the penalized likelihood of the GAM</li>
+<li>penalized iteratively re-weighted least squares</li>
+<li>The suggestion of representing GAMs using
+spline like penalized regression smoothers was made in section 9.3.6 of Hastie and
+Tibshirani (1990)</li>
+</ul></li>
+</ul>
+</div>
+<div id="practice-mgcv" class="section level2">
+<h2><span class="header-section-number">4.5</span> Practice MGCV</h2>
+<div id="basics-of-gam-model" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Basics of gam model</h3>
+<ul>
+<li>When the relationship is almost linear <span class="math inline">\(df = 1\)</span>, the confidence interval are zero when the estimates is zero due to the identifiability constrain. This restriction sets the mean value of <span class="math inline">\(f\)</span> to zero, such as there is no uncertainty when <span class="math inline">\(f = 0\)</span>.</li>
+<li>The points on the smoothed effects are just the partial residual, which simple are the Pearson residuals plus the smooth function for the corresponding covariate being plotted.</li>
+<li>Considering an initial model with <span class="math inline">\(k_1\)</span> knots and <span class="math inline">\(df&lt;k_1 -1\)</span>; then, increasing the number of knot to <span class="math inline">\(k_2\)</span>, can modified the number of effective degrees of freedom. It happens because different subspace of functions are obtained when <span class="math inline">\(k=k_1\)</span> or <span class="math inline">\(k+k_2\)</span> for a particular <span class="math inline">\(df\)</span>.</li>
+<li>Smoother functions can be obtained introducing and additional parameter to the GCV score <span class="math inline">\(\gamma\)</span>. For example, <span class="math inline">\(\gamma = 1.4\)</span> is suggested to avoid overfitting without compromising model fit.</li>
+</ul>
+</div>
+<div id="smoothing-several-variables" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Smoothing several variables</h3>
+<ul>
+<li>We can use thin plate regression spline or tensor products.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="310-statistical-inference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="450-survival-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/410-modelling.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
